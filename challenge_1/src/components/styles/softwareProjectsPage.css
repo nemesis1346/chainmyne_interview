@@ -1,0 +1,15 @@
+.software-projects-page-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    padding: 20px;
+}
+
+
+
+@media (max-width: 768px) {
+    .app-card-list {
+        margin-top: auto !important;
+    }
+
+}

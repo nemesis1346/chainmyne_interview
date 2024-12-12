@@ -1,0 +1,24 @@
+/* homePage.css */
+
+/* Flexbox layout to ensure alignment */
+.blog-card-container {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  padding: 20px;
+}
+
+.card {
+  display: inline-block;
+  float: left;
+
+  .card-body {
+    white-space: normal;
+  }
+}
+
+img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
