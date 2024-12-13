@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/chainmyne_interview/static/css/main.212a45c8.css",
-    "main.js": "/chainmyne_interview/static/js/main.7146a571.js",
+    "main.js": "/chainmyne_interview/static/js/main.ad7b128a.js",
     "static/media/brand-icons.svg": "/chainmyne_interview/static/media/brand-icons.6729d29753e000c17489.svg",
     "static/media/icons.svg": "/chainmyne_interview/static/media/icons.62d9dae4e0040e81c980.svg",
     "static/media/outline-icons.svg": "/chainmyne_interview/static/media/outline-icons.9c4845b4b41ef40a22fa.svg",
@@ -20,10 +20,10 @@
     "static/media/outline-icons.woff2": "/chainmyne_interview/static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "index.html": "/chainmyne_interview/index.html",
     "main.212a45c8.css.map": "/chainmyne_interview/static/css/main.212a45c8.css.map",
-    "main.7146a571.js.map": "/chainmyne_interview/static/js/main.7146a571.js.map"
+    "main.ad7b128a.js.map": "/chainmyne_interview/static/js/main.ad7b128a.js.map"
   },
   "entrypoints": [
     "static/css/main.212a45c8.css",
-    "static/js/main.7146a571.js"
+    "static/js/main.ad7b128a.js"
   ]
 }
