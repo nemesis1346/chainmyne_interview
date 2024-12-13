@@ -29,18 +29,18 @@ class App extends Component {
     
     return (
       <HashRouter>
-      <div className="App">
-      <NavBar
-      isNavbarOpen={this.state.isNavbarOpen}
-      onToggle={this.toggleNavbar}
-      updateMarginTop={this.updateMarginTop} />
-      <main className="main-content" style={{ marginTop: this.state.marginTop }}>
-      <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="*" element={<HomePage />} />
-      </Routes>
-      </main>
-      </div>
+        <div className="App">
+            <NavBar
+            isNavbarOpen={this.state.isNavbarOpen}
+            onToggle={this.toggleNavbar}
+            updateMarginTop={this.updateMarginTop} />
+              <main className="main-content" style={{ marginTop: this.state.marginTop }}>
+              <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="*" element={<HomePage />} />
+            </Routes>
+          </main>
+        </div>
       </HashRouter>
     );
   }
