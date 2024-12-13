@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 //This is the proper way to use materialize css in react
 import M from "materialize-css";
-import { Container, Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import '../styles/navbar.css'
 
 class NavBar extends React.Component {

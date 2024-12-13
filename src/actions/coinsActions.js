@@ -1,10 +1,10 @@
-import FirebaseApi from "../api/CoinGeckoApi";
+import CoinGeckoApi from "../api/CoinGeckoApi";
 import * as CONSTANTS from "../constants/types";
 import * as ERRORS from '../constants/errors';
 
 export const getCoinsFromCoinGecko = () => {
   return (dispatch) => {
-    FirebaseApi.getCoinsFromCoinGecko()
+    CoinGeckoApi.getCoinsFromCoinGecko()
       .then(res => {
         let coinList = [];
         res.forEach(doc => {

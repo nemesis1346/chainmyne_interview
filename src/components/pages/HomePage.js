@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { getCoinsFromCoinGecko } from '../../actions/coinsActions'; // Import your actions
-import CoinRow from '../cards/CoinCard'; // Renamed to CoinRow
+import CoinRow from '../cards/CoinCard'; 
 import { Container, Table, Alert } from 'react-bootstrap'; // Import Bootstrap components
 import '../styles/coinPage.css';
 
