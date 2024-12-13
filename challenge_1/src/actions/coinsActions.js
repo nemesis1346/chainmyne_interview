@@ -1,0 +1,37 @@
+import FirebaseApi from "../api/FirebaseApi";
+import * as CONSTANTS from "../constants/types";
+import * as ERRORS from '../constants/errors';
+
+export const getCoins = () => {
+  return (dispatch) => {
+    FirebaseApi.getDocumentsOrderedBy('/projects', 'timestamp','desc')
+      .then(res => {
+        let coinList = [];
+        res.forEach(doc => {
+          // console.log(doc)
+          coinList.push(doc);
+        });
+        dispatch(getCoinsSuccess(coinList));
+      })
+      .catch(err => {
+        console.log('ERROR GET COINS');
+        console.log(err);
+        dispatch(handleError(err.message));
+      });
+  }
+}
+
+
+const getCoinsSuccess = projects => {
+  return {
+    type: CONSTANTS.GET_COINS_SUCCESS,
+    projects: projects
+  };
+};
+
+const handleError = message => {
+  return {
+    type: ERRORS.ERROR_MIDDLEWARE,
+    error: message
+  };
+};

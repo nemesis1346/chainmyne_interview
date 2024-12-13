@@ -1,21 +1,20 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  getProjects,
-  getProjectsByDatetime
-} from "../../actions/softwareProjectFirebaseActions"; // Import your actions
-import ProjectCard from '../cards/ProjectCard';
+  getCoins
+} from "../../actions/coinsActions"; // Import your actions
+import CoinCard from '../cards/CoinCard';
 import { Container, Row, Col, Alert } from 'react-bootstrap'; // Import Bootstrap components
-import '../styles/softwareProjectsPage.css'
+import '../styles/coinPage.css'
 
 class HomePage extends React.Component {
   
   componentWillMount() {
     // Fetch projects when the component mounts
-    this.props.getProjectsByDatetime();
+    this.props.getCoins();
   }
   render() {
-    console.log('PROJECTS');
+    console.log('COINS');
     const { projects, error } = this.props;
     return (
       <Container className="software-projects-page-container">
@@ -24,7 +23,7 @@ class HomePage extends React.Component {
         {
           Object.keys(projects).map(key => (
             <Col key={key}>
-            <ProjectCard index={key} project={projects[key]} />
+            <CoinCard index={key} project={projects[key]} />
             </Col>
           ))
         }
@@ -40,19 +39,17 @@ class HomePage extends React.Component {
   }
 }
 
-const mapStateToPropsSoftwareProjectsPage = state => {
+const mapStateToPropsCoinPage = state => {
   //In this case objects is gonna be applied to the props of the component
   return {
-    projects: state.softwareProjectsPageReducer.projects,
-    error: state.softwareProjectsPageReducer.error,
-    language: state.constantReducer.language
-  };
+    projects: state.coinPageReducer.projects,
+    error: state.coinPageReducer.error
+    };
 };
 
 export default connect(
-  mapStateToPropsSoftwareProjectsPage,
+  mapStateToPropsCoinPage,
   {
-    getProjects,
-    getProjectsByDatetime
+    getCoins
   }
 )(HomePage);

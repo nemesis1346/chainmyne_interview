@@ -64,19 +64,7 @@ class FirebaseApi {
         await set(dbRef, value); // Set value at the specified path
     }
 
-    // Save a file to Firebase Storage
-    static async saveFile(path, name, file) {
-        // TODO: here i need to add the mp3 audio file
-        const blob = new Blob([file], { type: file.type }); // Ensure `file` is a Blob or a File object
-        const fileRef = storageRef(storage, `${path}/${name}`);
-        await uploadBytes(fileRef, blob); // Upload the file
-    }
-
-    // Get the download URL of an image from Storage
-    static async getImage(path) {
-        const fileRef = storageRef(storage, path);
-        return await getDownloadURL(fileRef); // Return download URL
-    }
+  
 }
 
 export default FirebaseApi;

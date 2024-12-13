@@ -1,9 +1,7 @@
-import React, { forwardRef } from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 //This is the proper way to use materialize css in react
 import M from "materialize-css";
-import { SPANISH_LANGUAGE, ENGLISH_LANGUAGE } from '../../constants/types';
-import { connect } from "react-redux";
 import { Container, Nav, Navbar, NavbarBrand, NavDropdown } from 'react-bootstrap'
 import '../styles/navbar.css'
 
@@ -21,10 +19,6 @@ class NavBar extends React.Component {
         //use a timeout to wait for the collapse animation to finish before calculating height
         setTimeout(() => {
             const height = isNavbarOpen ? 0 : this.collapseRef.current.offsetHeight
-            // console.log('Is Navbar open?')
-            // console.log(isNavbarOpen)
-            // console.log('Calculating height')
-            // console.log(height)
             updateMarginTop(height)
         }, 300) //Adjust the timeout duration as per the animation speed
     }
@@ -35,9 +29,7 @@ class NavBar extends React.Component {
         let selects = document.querySelectorAll('select');
         M.FormSelect.init(selects, {});
     }
-    // onItemClick = (e) => {
-    //     this.props.setLanguage(e.currentTarget.firstChild.text);
-    // }
+  
     render() {
         return (
             <Navbar expand='lg' className='blue darken-3' onToggle={this.handleToggle}>

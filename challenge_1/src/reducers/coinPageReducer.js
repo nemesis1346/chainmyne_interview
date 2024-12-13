@@ -5,9 +5,9 @@ const initState = {
     error: ''
 }
 
-const softwareProjectsPageReducer = (state = initState, action = {}) => {
+const coinPageReducer = (state = initState, action = {}) => {
     switch (action.type) {
-        case CONSTANTS.GET_PROJECTS_SUCCESS:
+        case CONSTANTS.GET_COINS_SUCCESS:
             return {
                 ...state,
                 projects: action.projects
@@ -22,4 +22,4 @@ const softwareProjectsPageReducer = (state = initState, action = {}) => {
     }
 }
 
-export default softwareProjectsPageReducer;
+export default coinPageReducer;
