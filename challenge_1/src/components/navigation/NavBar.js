@@ -34,7 +34,7 @@ class NavBar extends React.Component {
         return (
             <Navbar expand='lg' className='blue darken-3' onToggle={this.handleToggle}>
                 <Container className='navbar-container'>
-                    <Navbar.Brand as={Link} to='/' className='navbar-brand'>Marco Maigua</Navbar.Brand>
+                    <Navbar.Brand as={Link} to='/' className='navbar-brand'>CoinGecko App</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={this.handleToggle} />
                     <Navbar.Collapse id="basic-navbar-nav" ref={this.collapseRef} className={this.props.isNavbarOpen ? "show" : ""}>
                         <Nav className="ms-auto">

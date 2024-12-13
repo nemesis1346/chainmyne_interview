@@ -1,4 +1,4 @@
-import FirebaseApi from "../api/FirebaseApi";
+import FirebaseApi from "../api/CoinGeckoApi";
 import * as CONSTANTS from "../constants/types";
 import * as ERRORS from '../constants/errors';
 
