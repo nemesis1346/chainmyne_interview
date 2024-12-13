@@ -8,7 +8,7 @@ https://nemesis1346.github.io/chainmyne_interview_challenge_1/
 
 I used simple github pages for simplification since this React app is directly fething data and not relying on a server
 
-*Extra features:
+### Extra features:
 
 1. I took the liberty of adding 100 coins with its relevant information 
 
@@ -21,6 +21,8 @@ I used simple github pages for simplification since this React app is directly f
 5. I added a hamburger button when more features are required 
 
 6. I added images on the rows, the api was giving me already the png files
+
+7. Dockerfile is ready for future deployment in cloud services or just to wrap dependencies
 
 ### Installation steps and running locally
 
