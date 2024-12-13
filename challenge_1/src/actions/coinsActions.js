@@ -2,9 +2,9 @@ import FirebaseApi from "../api/FirebaseApi";
 import * as CONSTANTS from "../constants/types";
 import * as ERRORS from '../constants/errors';
 
-export const getCoins = () => {
+export const getCoinsFromCoinGecko = () => {
   return (dispatch) => {
-    FirebaseApi.getDocumentsOrderedBy('/projects', 'timestamp','desc')
+    FirebaseApi.getCoinsFromCoinGecko()
       .then(res => {
         let coinList = [];
         res.forEach(doc => {
@@ -20,7 +20,6 @@ export const getCoins = () => {
       });
   }
 }
-
 
 const getCoinsSuccess = coins => {
   return {

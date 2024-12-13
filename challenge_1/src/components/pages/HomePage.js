@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import {
-  getCoins
+  getCoins,
+  getCoinsFromCoinGecko
 } from "../../actions/coinsActions"; // Import your actions
 import CoinCard from '../cards/CoinCard';
 import { Container, Row, Col, Alert } from 'react-bootstrap'; // Import Bootstrap components
@@ -11,7 +12,9 @@ class HomePage extends React.Component {
   
   componentWillMount() {
     // Fetch coins when the component mounts
-    this.props.getCoins();
+    // this.props.getCoins();
+    this.props.getCoinsFromCoinGecko();
+
   }
   render() {
     console.log('COINS');
@@ -50,6 +53,6 @@ const mapStateToPropsCoinPage = state => {
 export default connect(
   mapStateToPropsCoinPage,
   {
-    getCoins
+    getCoinsFromCoinGecko
   }
 )(HomePage);
