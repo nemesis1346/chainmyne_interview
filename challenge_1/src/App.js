@@ -6,8 +6,6 @@ import 'materialize-css/dist/css/materialize.min.css';
 import './components/styles/App.css';
 
 class App extends Component {
-
-
   constructor(props) {
     super(props)
     this.state = {
@@ -15,37 +13,34 @@ class App extends Component {
       marginTop: 0
     };
   }
-
-
+  
   toggleNavbar = () => {
-    // console.log("Previous state")
-    // console.log(!this.state.isNavbarOpen)
     this.setState((prevState) => ({
       isNavbarOpen: !prevState.isNavbarOpen
     }))
   }
-
+  
   //Function to dynamically set margin-top of main content
   updateMarginTop = (height) => {
     this.setState({ marginTop: height })
   }
-
+  
   render() {
-
+    
     return (
       <HashRouter>
-        <div className="App">
-          <NavBar
-            isNavbarOpen={this.state.isNavbarOpen}
-            onToggle={this.toggleNavbar}
-            updateMarginTop={this.updateMarginTop} />
-          <main className="main-content" style={{ marginTop: this.state.marginTop }}>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="*" element={<HomePage />} />
-            </Routes>
-          </main>
-        </div>
+      <div className="App">
+      <NavBar
+      isNavbarOpen={this.state.isNavbarOpen}
+      onToggle={this.toggleNavbar}
+      updateMarginTop={this.updateMarginTop} />
+      <main className="main-content" style={{ marginTop: this.state.marginTop }}>
+      <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="*" element={<HomePage />} />
+      </Routes>
+      </main>
+      </div>
       </HashRouter>
     );
   }

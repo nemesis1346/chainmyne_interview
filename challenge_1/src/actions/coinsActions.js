@@ -22,10 +22,10 @@ export const getCoins = () => {
 }
 
 
-const getCoinsSuccess = projects => {
+const getCoinsSuccess = coins => {
   return {
     type: CONSTANTS.GET_COINS_SUCCESS,
-    projects: projects
+    coins: coins
   };
 };
 

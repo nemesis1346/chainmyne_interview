@@ -1,7 +1,7 @@
 import * as CONSTANTS from '../constants/types';
 import * as ERRORS from '../constants/errors';
 const initState = {
-    projects: [],
+    coins: [],
     error: ''
 }
 
@@ -10,7 +10,7 @@ const coinPageReducer = (state = initState, action = {}) => {
         case CONSTANTS.GET_COINS_SUCCESS:
             return {
                 ...state,
-                projects: action.projects
+                coins: action.coins
             }
         case ERRORS.ERROR_MIDDLEWARE:
             return {
